@@ -4,6 +4,7 @@
 * [Project Description](#description)
     * [Version 1](#version1)
     * [Version 2](#version2) 
+* [Setting up development environment for MacOS](#macOS)
 * [How to run project?](#run)
 * [Acknowledgement](#acknowledgement)
 * [Connect](#connect)
@@ -48,6 +49,14 @@ This version concerns more about the Graphical User Interface, allowing the user
 <p align="center"><img src="./img/v2_game.jpg" alt="Scrollable large image" width="70%"></p>
 <p align="center">"Rescue the Pink-cess" game</p>
 
+<a name="macOS"></a>
+# Setting up Development environment for MacOS
+Since I am using a Mac computer, my development environment is different from a Windows machine and requires different configurations. I prefer using VSCode as my code editor over other IDEs for its elegance and functionalities. Install the following toolchain for developing ARM on a Mac using Brew (package manager):
+-	GNU Embedded Toolchain for ARM (Mac 64-bit): `brew tap SergioBenitez/osxct` and `brew install aarch64-none-elf`
+-	Make tool: `brew install make`
+-	QEMU: `brew install qemu`
+-	LLVM/Clang: `brew install --with-toolchain llvm`
+-   To run Raspberry Pi OS, install Raspberry Pi Desktop and run image using Parallels Desktop (or other VMs)
 
 <a name="run"></a>
 # How to run project?
@@ -67,7 +76,7 @@ Version 2:
 <a name="connect"></a>
 # Connect with me
 * My [Website](https://hoangdesu.com/)
-* MY [LinkedIn](https://www.linkedin.com/in/hoangdesu/)
+* My [LinkedIn](https://www.linkedin.com/in/hoangdesu/)
 * My [Facebook](https://www.facebook.com/Hoangdayo/)
 * My [Instagram](https://www.instagram.com/hoang.desu/)
 * You can shoot me an [email](mailto:hoangdesu@gmail.com) too!
