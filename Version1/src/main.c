@@ -2,40 +2,7 @@
 #include "mbox.h"
 #include "framebf.h"
 
-void displayWelcomeMessage()
-{
-
-	static const char message[16][100] = {
-
-		"d88888b d88888b d88888b d888888b   .d888b.   j88D  .d888b.  .d88b.",
-		"88'     88'     88'     `~~88~~'   VP  `8D  j8~88  88' `8D .8P  88. ",
-		"88ooooo 88ooooo 88ooooo    88         odD' j8' 88  `V8o88' 88  d'88",
-		"88~~~~~ 88~~~~~ 88~~~~~    88       .88'   V88888D    d8'  88 d' 88",
-		"88.     88.     88.        88      j88.        88    d8'   `88  d8' ",
-		"Y88888P Y88888P Y88888P    YP      888888D     VP   d8'     `Y88P'  ",
-		"\n",
-		"#     #                                 #######  ##### ",
-		"#     #  ####    ##   #    #  ####      #     # #     #",
-		"#     # #    #  #  #  ##   # #    #     #     # #       ",
-		"####### #    # #    # # #  # #          #     #  #####  ",
-		"#     # #    # ###### #  # # #  ###     #     #       # ",
-		"#     # #    # #    # #   ## #    #     #     # #     # ",
-		"#     #  ####  #    # #    #  ####      #######  #####  ",
-		"\n",
-		"\tDeveloped by <Hoang Nguyen> - <s3697305>\n"
-
-	};
-
-	uart_puts("\n\n");
-	char color[] = "\033[33;1m";
-	uart_puts(color);
-
-	for (int i = 0; i < (sizeof(message) / sizeof(*message)); i++)
-	{
-		uart_puts(message[i]);
-		uart_sendc('\n');
-	}
-}
+void displayWelcomeMessage();
 
 void main()
 {
@@ -457,5 +424,40 @@ void main()
 			width[k] = '\0';
 			height[k] = '\0';
 		}
+	}
+}
+
+void displayWelcomeMessage()
+{
+
+	static const char message[16][100] = {
+
+		"d88888b d88888b d88888b d888888b   .d888b.   j88D  .d888b.  .d88b.",
+		"88'     88'     88'     `~~88~~'   VP  `8D  j8~88  88' `8D .8P  88. ",
+		"88ooooo 88ooooo 88ooooo    88         odD' j8' 88  `V8o88' 88  d'88",
+		"88~~~~~ 88~~~~~ 88~~~~~    88       .88'   V88888D    d8'  88 d' 88",
+		"88.     88.     88.        88      j88.        88    d8'   `88  d8' ",
+		"Y88888P Y88888P Y88888P    YP      888888D     VP   d8'     `Y88P'  ",
+		"\n",
+		"#     #                                 #######  ##### ",
+		"#     #  ####    ##   #    #  ####      #     # #     #",
+		"#     # #    #  #  #  ##   # #    #     #     # #       ",
+		"####### #    # #    # # #  # #          #     #  #####  ",
+		"#     # #    # ###### #  # # #  ###     #     #       # ",
+		"#     # #    # #    # #   ## #    #     #     # #     # ",
+		"#     #  ####  #    # #    #  ####      #######  #####  ",
+		"\n",
+		"\tDeveloped by <Hoang Nguyen> - <s3697305>\n"
+
+	};
+
+	uart_puts("\n\n");
+	char color[] = "\033[33;1m";
+	uart_puts(color);
+
+	for (int i = 0; i < (sizeof(message) / sizeof(*message)); i++)
+	{
+		uart_puts(message[i]);
+		uart_sendc('\n');
 	}
 }
